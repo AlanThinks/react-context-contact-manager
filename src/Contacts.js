@@ -25,12 +25,19 @@ export default class Contacts extends Component {
     ]
   }
 
+  deleteContact = () => {
+    console.log("hi")
+  }
   render() {
     const { contacts } = this.state
     return (
       <React.Fragment>
         {contacts.map(contact => (
-          <Contact key={contact.key} contact={contact} />
+          <Contact
+            key={contact.key}
+            contact={contact}
+            deleteClickHandler={this.deleteContact}
+          />
         ))}
       </React.Fragment>
     )
