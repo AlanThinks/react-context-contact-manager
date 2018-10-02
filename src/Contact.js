@@ -14,7 +14,7 @@ class Contact extends Component {
     this.setState({ showContactInfo: !this.state.showContactInfo })
   }
   onDeleteClick = () => {
-    this.props.deleteClickHandler()
+    this.props.deleteClickHandler(this.props.id)
   }
   render() {
     const { name, email, phone } = this.props.contact

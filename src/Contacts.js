@@ -25,8 +25,11 @@ export default class Contacts extends Component {
     ]
   }
 
-  deleteContact = () => {
-    console.log("hi")
+  deleteContact = id => {
+    const { contacts } = this.state
+    this.setState({
+      contacts: contacts.filter(contact => contact.key !== id)
+    })
   }
   render() {
     const { contacts } = this.state
@@ -35,6 +38,7 @@ export default class Contacts extends Component {
         {contacts.map(contact => (
           <Contact
             key={contact.key}
+            id={contact.key}
             contact={contact}
             deleteClickHandler={this.deleteContact}
           />
