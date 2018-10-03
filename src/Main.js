@@ -10,7 +10,7 @@ class Main extends Component {
     return (
       <Provider>
         <div className="App">
-          <Header branding="Improved Contacts" />
+          <Header branding="React/Context Contact Manager" />
           <div className="container">
             <Contacts />
           </div>

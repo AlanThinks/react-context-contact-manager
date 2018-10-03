@@ -3,12 +3,12 @@ import Contact from "./Contact"
 import { Consumer } from "./context"
 
 export default class Contacts extends Component {
-  deleteContact = id => {
-    const { contacts } = this.state
-    this.setState({
-      contacts: contacts.filter(contact => contact.key !== id)
-    })
-  }
+  //   deleteContact = id => {
+  //     const { contacts } = this.state
+  //     this.setState({
+  //       contacts: contacts.filter(contact => contact.key !== id)
+  //     })
+  //   }
   render() {
     return (
       <Consumer>
@@ -17,12 +17,7 @@ export default class Contacts extends Component {
           return (
             <React.Fragment>
               {contacts.map(contact => (
-                <Contact
-                  key={contact.key}
-                  id={contact.key}
-                  contact={contact}
-                  deleteClickHandler={this.deleteContact}
-                />
+                <Contact key={contact.id} contact={contact} />
               ))}
             </React.Fragment>
           )
