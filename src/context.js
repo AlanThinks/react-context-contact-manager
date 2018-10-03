@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 
 const Context = React.createContext()
+
 const reducer = (state, action) => {
   switch (action.type) {
     case `DELETE_CONTACT`:
@@ -10,8 +11,13 @@ const reducer = (state, action) => {
           contact => contact.id !== action.payload
         )
       }
+    case `ADD_CONTACT`:
+      return {
+        ...state,
+        contacts: [action.payload, ...state.contacts]
+      }
     default:
-      console.log("NO ACTION FOUND")
+      return state
   }
 }
 
