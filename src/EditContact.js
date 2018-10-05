@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { Consumer } from "./context"
 // import uuid from "uuid"
 import InputGroup from "./InputGroup"
-import axios from "axios"
+// import axios from "axios"
 
 // NOTE: I didn't end up using this component, instead I added
 // the "edit" functionality in 'Contact.js'
