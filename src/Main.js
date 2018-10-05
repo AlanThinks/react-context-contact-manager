@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import "./Main.css"
 import Contacts from "./Contacts"
 import Header from "./Header"
-import AddContact from "./AddContact"
 import AboutMe from "./AboutMe"
+import EditContact from "./EditContact"
+import AddContact from "./AddContact"
 import NotFound from "./NotFound"
 import { Provider } from "./context"
 
@@ -20,6 +21,7 @@ class Main extends Component {
               <Switch>
                 <Route exact path="/" component={Contacts} />
                 <Route exact path="/new-contact" component={AddContact} />
+                <Route exact path="/edit-contact" component={EditContact} />
                 <Route exact path="/about/" component={AboutMe} />
                 <Route exact path="/about/:id" component={AboutMe} />
                 <Route component={NotFound} />
